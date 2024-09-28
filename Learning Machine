@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+def generate_data(n=50, noise=10.0):
+    np.random.seed(42)
+    X = np.linspace(-10, 10, n)
+    # Ground truth line: y = 3x + 8
+    true_slope = 3
+    true_intercept = 8
+    noise = np.random.randn(n) * noise
+    y = true_slope * X + true_intercept + noise
+    return X, y
